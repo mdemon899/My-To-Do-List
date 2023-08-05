@@ -1,0 +1,129 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Common Css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #105741, #0e0657);
+    padding: 10px;
+}
+
+/* Logo Part */
+.my_todo_app {
+    width: 100%;
+    max-width: 550px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.my_todo_app h1 {
+    color: #eb4d4b;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.my_todo_app img {
+    width: 31px;
+    margin-left: 10px;
+}
+
+/* Input Area And Button */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    padding-left: 22px;
+    margin-bottom: 24px;
+    background: #edeef9;
+}
+
+.row input {
+    width: 100%;
+    padding: 9px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 400;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    padding: 15px 51px;
+    background: #eb4d4b;
+    border-radius: 35px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Lists */
+#list_container li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+    overflow-wrap: break-word;
+}
+
+#list_container li::before {
+    content: "";
+    height: 26px;
+    width: 26px;
+    background: url(../IMG/unchecked.png);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    top: 13px;
+    left: 10px;
+}
+
+#list_container .checked {
+    color: #615e5e;
+    text-decoration: line-through;
+}
+
+#list_container .checked::before {
+    content: "";
+    height: 26px;
+    width: 26px;
+    background: url(../IMG/checked.png);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    top: 13px;
+    left: 10px;
+}
+
+/* Delete Button */
+
+#list_container li span {
+    position: absolute;
+    right: -20px;
+    top: 6px;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    color: #555;
+    line-height: 42px;
+    text-align: center;
+}
